@@ -24,7 +24,7 @@ class App extends Component {
             </ul>
             <Route exact path="/" component={ProductsPage} />
             <Route path="/products/:id" component={ProductPage} />
-            <Route path="categories/:id" component={ProductsPage} />
+            <Route path="/categories/:id" component={ProductsPage} />
           </div>
         </Router>
       </Provider>

@@ -5,8 +5,22 @@ import Category from "../components/Category";
 
 class ProductsPage extends React.Component {
   componentDidMount() {
-    this.props.loadProducts();
-    this.props.loadCategories();
+    this.loadData(this.props);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.match.url !== this.props.match.url) {
+      this.loadData(nextProps);
+    }
+  }
+
+  loadData(props) {
+    let queryParams = {};
+    if (props.match.path === "/categories/:id") {
+      queryParams = { filter: { categoryId: props.match.params.id } };
+    }
+    props.loadProducts(queryParams);
+    props.loadCategories();
   }
 
   render() {

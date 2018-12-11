@@ -1,3 +1,4 @@
+import qs from "qs";
 const baseUrl = "https://rest-api-broot.glitch.me/api/taraschuiko";
 
 export function checkStatus(response) {
@@ -8,8 +9,14 @@ export function checkStatus(response) {
   }
 }
 
-export function loadProducts() {
-  return fetch(`${baseUrl}/products`).then(r => r.json());
+// export function loadProducts() {
+//   return fetch(`${baseUrl}/products`).then(r => r.json());
+// }
+
+export function loadProducts(queryParams) {
+  return fetch(`${baseUrl}/products?${qs.stringify(queryParams)}`).then(r =>
+    r.json()
+  );
 }
 
 export function loadProduct(id) {
