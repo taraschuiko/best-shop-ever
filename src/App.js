@@ -8,6 +8,9 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import ProductsPage from "./pages/ProductsPage";
 import ProductPage from "./pages/ProductPage";
 
+// Заповнити продукти і зробити розмітку для неї, загрузка категорій
+// Редюсер до одного продукта
+
 class App extends Component {
   render() {
     return (
@@ -16,14 +19,12 @@ class App extends Component {
           <div>
             <ul>
               <li>
-                <Link to="/">Products</Link>
-              </li>
-              <li>
-                <Link to="/products/1">Product 1</Link>
+                <Link to="/">Home</Link>
               </li>
             </ul>
             <Route exact path="/" component={ProductsPage} />
             <Route path="/products/:id" component={ProductPage} />
+            <Route path="categories/:id" component={ProductsPage} />
           </div>
         </Router>
       </Provider>
