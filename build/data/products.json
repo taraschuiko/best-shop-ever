@@ -1,0 +1,21 @@
+[{
+    "id": 1,
+    "name": "TV"
+  },
+  {
+    "id": 2,
+    "name": "PC"
+  },
+  {
+    "id": 3,
+    "name": "Xbox"
+  },
+  {
+    "id": 4,
+    "name": "MacBook"
+  },
+  {
+    "id": 5,
+    "name": "Phone"
+  }
+]
