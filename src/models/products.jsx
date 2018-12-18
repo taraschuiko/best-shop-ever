@@ -11,8 +11,6 @@ function createModel(loadProducts) {
     effects: dispatch => ({
       async loadAll(queryParams, rootState) {
         loadProducts(queryParams).then(data => this.setList(data));
-        // const product = await loadProduct(queryParams);
-        // this.setList([product]);
       },
       async loadOne(id, rootState) {
         const product = await loadProduct(id);
