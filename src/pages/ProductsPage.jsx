@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import Product from "../components/Product";
 import Category from "../components/Category";
 import CartButton from "../components/CartButton";
-import cart from "../models/cart";
 import categoryForProductSelector from "../selectors/categoryForProductSelector";
 
 class ProductsPage extends React.Component {
