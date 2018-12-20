@@ -1,8 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+
 import numberOfProductsInCartSelector from "../selectors/numberOfProductsInCart";
 import totalPriceSelector from "../selectors/totalPrice";
-import { Link } from "react-router-dom";
 
 export function CartButton({ productsQuantity, totalPrice }) {
   return (
@@ -16,6 +17,7 @@ export function CartButton({ productsQuantity, totalPrice }) {
 
 const mapState = state => ({
   productsQuantity: numberOfProductsInCartSelector(state.cart),
-  totalPrice: totalPriceSelector(state.cart, state.products.list)
+  totalPrice: totalPriceSelector(state.cart)
 });
+
 export default connect(mapState)(CartButton);

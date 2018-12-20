@@ -4,10 +4,7 @@ import Product from "../components/Product";
 import Category from "../components/Category";
 import CartButton from "../components/CartButton";
 import cart from "../models/cart";
-
-function getCategory(product, categories) {
-  return categories.find(category => product.categoryId === category.id);
-}
+import categoryForProductSelector from "../selectors/categoryForProductSelector";
 
 class ProductsPage extends React.Component {
   componentDidMount() {
@@ -52,8 +49,10 @@ class ProductsPage extends React.Component {
                   <Product
                     key={product.id}
                     product={product}
-                    category={getCategory(product, this.props.categories)}
-                    addProductToCart={cart.addProduct}
+                    category={categoryForProductSelector(
+                      product,
+                      this.props.categories
+                    )}
                   />
                 ))}
               </div>

@@ -5,14 +5,14 @@ export default function({ product }) {
     <section>
       <div className="container">
         <div className="row">
-          <div className="col-2">
+          <div className="col-3">
             <img
               src={product.image}
               alt="Image"
               className="product-extended-image"
             />
           </div>
-          <div className="col-10">
+          <div className="col-9">
             <h2>{product.name}</h2>
             <p>{product.description}</p>
             <h3>${product.price}</h3>

@@ -47,7 +47,8 @@ header {
 }
 
 .product-card img {
-  height: 140px;
+  max-height: 140px;
+  max-width: 100%;
   display: block;
 }
 
@@ -61,4 +62,8 @@ footer {
 
 .product-extended-image {
   width: 100%;
+}
+
+.cartItem button {
+  margin: 0 6px;
 }

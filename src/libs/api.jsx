@@ -1,5 +1,5 @@
 import qs from "qs";
-const baseUrl = "https://rest-api-broot.glitch.me/api/taraschuiko";
+const baseUrl = process.env.REACT_APP_API_URL;
 
 export function checkStatus(response) {
   if (response.ok) {

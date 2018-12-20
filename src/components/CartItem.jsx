@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 
 export function CartItem({ product, quantity, addOne, removeOne, remove }) {
   return (
-    <div>
+    <div className="cartItem">
       <Link to={`/products/${product.id}`}>{product.name}</Link>
-      <button onClick={removeOne}>-1</button>
+      <button onClick={removeOne}>-</button>
       {quantity}
-      <button onClick={addOne}>+1</button>
-      <button onClick={remove}>Remove</button>
+      <button onClick={addOne}>+</button>
+      <button onClick={remove}>x</button>
     </div>
   );
 }
